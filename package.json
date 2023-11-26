@@ -1,0 +1,23 @@
+{
+  "name": "uberpool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "node D:\\GitHub\\UberPool\\back\\index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AchRef864/UberPool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AchRef864/UberPool/issues"
+  },
+  "homepage": "https://github.com/AchRef864/UberPool#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.1"
+  }
+}
