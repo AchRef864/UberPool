@@ -5,7 +5,14 @@ const { createItem, readAll, readItem, updateItem, deleteItem } = require("../to
 
 //Create
 router.post('/', async (req, res) => {
+    const review = new Review({
+        review_user_id: req.body.review_user_id,
+        rating: req.body.rating,
+        review_text: req.body.review_text,
+        creation_date: req.body.creation_date
+    });
 
+    await createItem(req, res, review)
 })
 
 //Read all
@@ -21,7 +28,21 @@ router.get('/:id', getReview, async (req, res) => {
 
 //Update
 router.patch('/:id', getReview, async (req, res) => {
+    if (req.body.review_user_id != null) {
+        res.review.review_user_id = req.body.review_user_id;
+    }
 
+    if (req.body.rating != null) {
+        res.review.rating = req.body.rating;
+    }
+
+    if (req.body.review_text != null) {
+        res.review.review_text = req.body.review_text;
+    }
+
+    if (req.body.creation_date != null) {
+        res.review.creation_date = req.body.creation_date;
+    }
 })
 
 //Delete

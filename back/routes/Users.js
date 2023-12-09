@@ -70,6 +70,18 @@ router.delete('/:id', getUser, async (req, res) => {
     await deleteItem(req, res, res.user)
 })
 
+//Find
+router.post('/search', async (req, res) => {
+    try {
+        const { searchTerm } = req.body;
+        const regex = new RegExp(searchTerm, 'i'); // Case-insensitive search
+        const users = await User.find({ name: { $regex: regex } });
+        res.json({ users });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
 async function getUser(req, res, next) {
     let user
     try {
@@ -84,5 +96,7 @@ async function getUser(req, res, next) {
     res.user = user
     next()
 }
+
+
 
 module.exports = router

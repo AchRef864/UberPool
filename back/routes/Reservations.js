@@ -5,7 +5,14 @@ const { createItem, readAll, readItem, updateItem, deleteItem } = require("../to
 
 //Create
 router.post('/', async (req, res) => {
+    const reservation = new Reservation({
+        passenger_id: req.body.passenger_id,
+        ride_id: req.body.ride_id,
+        reserved_seats: req.body.reserved_seats,
+        reservation_status: req.body.reservation_status || 'pending',
+    });
 
+    await createItem(req, res, reservation)
 })
 
 //Read all
@@ -21,7 +28,29 @@ router.get('/:id', getReservation, async (req, res) => {
 
 //Update
 router.patch('/:id', getReservation, async (req, res) => {
+    router.patch('/:id', getRide, async (req, res) => {
+        if (req.body.passenger_id != null) {
+            res.reservation.passenger_id = req.body.passenger_id;
+        }
 
+        if (req.body.ride_id != null) {
+            res.ride.ride_id = req.body.ride_id;
+        }
+
+        if (req.body.reserved_seats != null) {
+            res.ride.reserved_seats = req.body.reserved_seats;
+        }
+
+        if (req.body.reservation_status != null) {
+            res.ride.reservation_status = req.body.reservation_status;
+        }
+
+        if (req.body.reservation_date != null) {
+            res.ride.reservation_date = req.body.reservation_date;
+        }
+
+        await updateItem(req, res, res.ride);
+    });
 })
 
 //Delete

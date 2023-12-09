@@ -1,3 +1,4 @@
+#User
 GET http://localhost:3000/Users/
 
 ###
@@ -14,11 +15,11 @@ Content-Type: application/json
 {
   "email": "newuser3@example.com",
   "password": "newuser3",
-  "phone_number": "+52525252",
-  "name": "habib",
+  "phone_number": "+26262626262",
+  "name": "tasnim",
   "profile_picture": "https://example.com/profile_picture3.jpg",
-  "verification_status": false,
-  "user_type": "passenger"
+  "verification_status": true,
+  "user_type": "driver"
 }
 
 ###
@@ -35,4 +36,82 @@ Content-Type: application/json
 {
     "phone_number": "+2"
 }
+
+###
+
+POST http://localhost:3000/Users/search
+Content-Type: application/json
+
+{
+    "searchTerm": "y"
+}
+
+###
+
+POST http://localhost:3000/Users/login
+Content-Type: application/json
+
+{
+  "username": "newuser1@example.com",
+  "password": "newuse1rpassword"
+}
+
+
+###
+
+#Ride
+GET http://localhost:3000/Rides/
+
+###
+
+GET http://localhost:3000/Rides/price/low-high
+
+###
+
+GET http://localhost:3000/Rides/price/high-low
+
+###
+
+GET http://localhost:3000/Rides/expired/65638198fc8cbd7c791ed74d
+
+###
+
+GET http://localhost:3000/Rides/available/65638198fc8cbd7c791ed74d
+
+###
+
+GET http://localhost:3000/Rides/65737be8667c94eac47fec63
+
+###
+
+GET http://localhost:3000/Rides/filter/65638198fc8cbd7c791ed74d
+
+###
+
+POST http://localhost:3000/Rides/
+Content-Type: application/json
+
+{
+  "driver_id": "65638198fc8cbd7c791ed74d",
+  "car_brand": "clio peugeot 106",
+  "start_location": "Tunis",
+  "end_location": "Sousse",
+  "departure_time": "2023-12-11T14:00:00",
+  "arrival_time": "2023-12-11T16:00:00",
+  "available_seats": 3,
+  "price_per_seat": 14,
+  "ride_description": "Morning commute from Tunis to Sousse."
+}
+
+###
+
+POST http://localhost:3000/Rides/location
+Content-Type: application/json
+
+{
+  "start_location": "",
+  "end_location": "e"
+}
+
+###
 
