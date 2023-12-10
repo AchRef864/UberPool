@@ -1,0 +1,37 @@
+GET http://localhost:3000/Users/
+
+###
+
+GET http://localhost:3000/Users/6564807bf8e8bab85b1ee755
+
+
+###
+
+
+POST http://localhost:3000/Users/
+Content-Type: application/json
+
+{
+  "email": "tas@example.com",
+  "password": "newuser3",
+  "phone_number": "+000000",
+  "name": "tasnim",
+  "profile_picture": "https://example.com/profile_picture8.jpg",
+  "verification_status": true,
+  "user_type": "passenger"
+}
+
+###
+
+DELETE http://localhost:3000/Users/6563ab34d2fda6db5e6f73a7
+
+
+###
+
+
+PATCH  http://localhost:3000/Users/6564807bf8e8bab85b1ee755
+Content-Type: application/json
+
+{
+    "name": "achref"
+}
