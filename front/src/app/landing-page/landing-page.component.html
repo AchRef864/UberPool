@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="login-box">
+    <h1>Login and Sign Up</h1>
+    <br><br>
+    <form>
+      <div class="user-box">
+        <p>Access your account, whether you're a driver or a passenger, and enjoy the benefits of our carpooling community. Sign up now and start sharing rides with fellow commuters.</p>
+  
+      </div>
+      <br><br>
+      <div class="user-box">
+        <style>
+          .grid-container {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 10px;
+              border-collapse: collapse;
+              width: 100%;
+              text-align: left;
+              
+          }
+          .grid-item {
+              
+              padding: 10px;
+              
+          }
+      </style>
+      <div class="grid-container">
+          <div class="grid-item">
+              <h2>Driver</h2>
+              <p>Contribute to a greener future, earn extra income, and showcase your driving skills. Help others reach their destinations conveniently</p>
+              <a routerLink="/signUp">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Sign Up as a Driver
+              </a>
+          </div>
+          <div class="grid-item">
+              <h2>Passenger</h2>
+              <p>Sit back, relax, and let our reliable drivers get you to your destination safely and on time. Enjoy affordable and comfortable rides.</p>
+              <a routerLink="/signUp">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Sign Up as a Passenger
+              </a>
+          </div>
+      </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
