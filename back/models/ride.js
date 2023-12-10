@@ -4,7 +4,10 @@ const rideSchema = new mongoose.Schema({
     driver_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        unique: true,
+        required: true,
+    },
+    car_brand: {
+        type: String,
         required: true,
     },
     start_location: {
