@@ -115,3 +115,12 @@ Content-Type: application/json
 
 ###
 
+POST http://localhost:3000/Reservations/
+Content-Type: application/json
+
+{
+  "passenger_id": "65638198fc8cbd7c791ed74d",
+  "ride_id": "657387d7a88f33298dfdeb9f",
+  "reserved_seats": "5",
+  "reservation_status": "confirmed"
+}
