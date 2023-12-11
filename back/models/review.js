@@ -5,6 +5,14 @@ const reviewSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true,
+        validate: {
+            validator: async function (value) {
+                // Fetch the user document to check user_type
+                const user = await this.model('User').findById(value);
+                return user && user.user_type === 'passenger';
+            },
+            message: 'The specified user must be a passenger.',
+        },
     },
     rating: {
         type: Number,
