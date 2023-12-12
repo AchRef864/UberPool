@@ -1,0 +1,708 @@
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Overpass+Mono:600,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+body {
+  overflow-x: hidden;
+}
+
+/*
+  GLOBAL
+*/
+h2 {
+  margin-top: 0;
+}
+
+button {
+  border: 0;
+  background: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+  HEADER
+*/
+header {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent),
+    url('https://cdn.dribbble.com/users/1348820/screenshots/3475788/bulk_booking.jpg') no-repeat center center;
+    background-position: right center;
+  background-attachment: fixed;
+  background-size: 1100px;
+  display: flex;
+  flex-direction: column;
+}
+.custom-font {
+  font-family: 'Alex Brush', cursive;
+  color: #94143a;
+  font-size: 2000px;
+  line-height: 0;
+}
+.custom-font1 {
+  font-family: Arial sans-serif;
+  color: #141414;
+  font-size: 25px;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  
+}
+
+.add-padding {
+  padding: 25px;
+}
+
+.custom-center-text {
+  position: absolute;
+  top: 40%;
+  left: 7%;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  color: rgb(10, 10, 10);
+}
+
+
+.custom-center-text a {
+  position: absolute;
+  top: 150%;
+  left: 18%;
+  font-family: 'PT Sans', sans-serif;
+  color: #0e0e0e;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-bottom: solid 2px #060606;
+  letter-spacing: 3px;
+}
+
+.add-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-stuffed-cherries {
+  background: url('https://www.utma.com/wp-content/uploads/2020/05/Avoid-scams.jpg') no-repeat center center;
+  background-size: cover;
+  height: 315px;
+  width: 320px;
+}
+
+.custom-center-text h3 {
+  position: absolute;
+  top: 100%;
+  left: 30%;
+}
+
+
+/*
+  NAV
+*/
+
+nav {
+  padding: 15px 35px;
+  display: flex;
+  position: fixed;
+}
+
+nav h2 {
+  margin-bottom: 0;
+  flex: 1;
+  letter-spacing: 3px;
+  font-family: 'Overpass Mono', monospace !important;
+}
+
+nav #logo {
+  color: rgba(0,0,0,.6);
+  text-transform: uppercase;
+  border-bottom: solid 2px rgba(0,0,0,.6);
+}
+
+nav .nav-button {
+  color: #c0c0c0;
+  font-size: 23px;
+}
+
+nav div {
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  text-align: center;
+  transform: scale(0);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+nav div ul {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav div .exit-menu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: rgba(0,0,0,.6);
+  font-size: 20px;
+  padding: 10px;
+}
+
+nav div ul li {
+  font-family: 'PT Sans', sans-serif !important;
+  text-transform: uppercase;
+}
+
+nav div ul li a {
+  display: block;
+  color: rgba(0,0,0,.6);
+  padding: 15px 5px;
+  transition: all 0.4s;
+}
+
+nav div ul li a:hover,
+nav div ul li .active:hover {
+  color: #94143a;
+  border-bottom-color: #94143a;
+}
+
+
+
+/*
+  SECTIONS
+*/
+
+/*
+  CLASSES
+*/
+.custom-font {
+  font-family: 'Alex Brush', cursive;
+  color: #94143a;
+  font-size: 75px;
+  line-height: 0;
+}
+
+.add-padding {
+  padding: 25px;
+}
+
+.center-text {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  color: rgb(77, 77, 77);
+}
+
+.center-text h2 {
+  margin-top: 25px;
+  line-height: 0;
+}
+
+.center-text p {
+  margin-top: 0;
+  font-family: 'PT Sans', sans-serif;
+  line-height: 1.5;
+}
+
+.center-text a {
+  font-family: 'PT Sans', sans-serif;
+  color: #94143a;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-bottom: solid 2px #94143a;
+  
+}
+
+.add-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-flex .stuffed-cherries {
+  background: url('https://www.utma.com/wp-content/uploads/2020/05/Avoid-scams.jpg') no-repeat center center;
+  background-size: cover;
+  height: 315px;
+  width: 320px;
+}
+.add-flex1 {
+  display: flex;
+  flex-direction: row; /* Change to row for horizontal alignment */
+  align-items: center;
+}
+
+.add-flex1 .stuffed-cherries {
+  background: url('https://th.bing.com/th/id/OIP.FEdyZQ5the7urdL16einqwHaGN?rs=1&pid=ImgDetMain') no-repeat center center;
+  background-size: cover;
+  height: 315px;
+  width: 500px;
+  margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.center-h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-h1 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  letter-spacing: 5px;
+  margin-bottom: 0;
+}
+
+.custom-h1 span {
+  letter-spacing: 0;
+}
+
+/*
+  TASTEFUL RECIPES SECTION
+*/
+.bread-background {
+  background: rgba(115, 18, 18, 0.5) url('http://www.performerprosites.com/development/clients/showpalace/wp-content/uploads/2014/05/tasteful-recipies-dinner-theatre.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+}
+.bread-background .custom-h1 {
+  text-align: center;
+  color: #000; /* Change the color to black */
+  letter-spacing: 5px;
+  margin-bottom: 0;
+}
+
+
+/*
+  MENU SECTION
+*/
+.menu {
+  padding: 30px;
+}
+
+.menu-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.menu {
+  padding:30px;
+  &-images {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:10px;
+    img {
+      width:100%;
+    }
+  }
+}
+.menu-images img {
+  width: 100%;
+}
+
+
+/*
+  THE PERFECT BLEND SECTION
+*/
+.cake-background {
+  background: rgba(115, 18, 18, 0.5) url('http://www.rustiquerichmond.co.uk/wp-content/uploads/2014/06/desert.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+}
+.cake-background .custom-h1 {
+  text-align: center;
+  color: #000; /* Change the color to black */
+  letter-spacing: 5px;
+  margin-bottom: 0;
+}
+
+.center-text h1 {
+  color: #000; /* Change the color to black */
+}
+
+.center-text p {
+  color: #000; /* Change the color to black */
+}
+
+.center-text a {
+  color: #000; /* Change the color to black */
+  border-bottom: solid 2px #000; /* Change the border color to black */
+}
+.center-text table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  margin-left: 70px;
+  border: none; 
+}
+
+.center-text .table1 {
+  margin-left:300px;
+  
+}
+/* Style the table cells */
+.center-text td {
+  padding: 10px;
+  text-align: left;
+  border: none;
+}
+
+/* Add a class to the button text for styling */
+.button-text {
+  flex: 1; /* Take up all available space */
+  text-align: left;
+  padding-left: 10px; /* Add some left padding for spacing */
+}
+
+/* Adjust the button styles */
+.center-text button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  height: 80px;
+  background-color: #eaeef1;
+  color: #131313;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 25px;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.center-text button:hover {
+  background: #550713;
+  color: #121212;
+  border-radius: 25px;
+  box-shadow: 0 0 5px, 0 0 25px, 0 0 50px , 0 0 100px ;
+}
+
+
+
+
+
+/*
+  CULINARY DELIGHT SECTION
+*/
+.reservation-section {
+  margin-bottom: 40px;
+}
+
+.reservation-section div:first-child {
+  flex: 1;
+}
+
+.reservation-section div:last-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  flex: 1;
+}
+
+.reservation-section div:last-child img {
+  margin: auto;
+  width: 85%;
+}
+footer {
+  margin: 0;
+  position: relative;
+}
+
+footer button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
+  border-radius: 50%;
+  margin-top: 0;
+}
+
+footer h4 {
+  margin-bottom: 0;
+}
+
+footer h5 {
+  line-height: 1.5;
+}
+
+footer {
+  background: rgb(20, 20, 20);
+  color: lightgray;
+}
+
+footer .restaurant-info {
+  padding: 35px 40px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .copyright {
+  background: rgb(215, 215, 215);
+  color: rgb(150, 150, 150);
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+footer .copyright span {
+  border-bottom: solid 1px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 425px) {
+  header,
+  .bread-background,
+  .cake-background {
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 768px) {
+  footer .restaurant-info {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 769px) {
+  nav {
+    position: initial !important;
+    align-items: baseline;
+    padding: 20px 70px !important;
+  }
+
+  nav .nav-button {
+    display: none;
+  }
+
+  nav div {
+    position: initial !important;
+    background: none !important;
+    opacity: initial !important;
+    transform: initial !important;
+  }
+
+  nav div ul {
+    position: initial !important;
+    flex-direction: row !important;
+  }
+
+  nav div ul .exit-menu {
+    display: none;
+  }
+
+  nav div ul li a {
+    font-size: 12.8px;
+    margin: 0 10px;
+    letter-spacing: 1px;
+    padding: 5px 0 !important;
+  }
+
+  nav div ul li .active {
+    border-bottom: solid 1px lightgray;
+  }
+
+  .add-padding {
+    padding: 50px 0;
+  }
+
+  .add-flex {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .add-flex div:first-child {
+    flex: 1;
+    padding: 0 50px;
+  }
+
+  .add-flex div:last-child {
+    min-width: 400px;
+    margin: 50px;
+  }
+  
+  
+  th, td {
+    border: 1px solid #ddd; /* Ajoute une bordure aux cellules */
+    padding: 8px; /* Ajoute de l'espace à l'intérieur des cellules */
+    text-align: left; /* Alignement du texte à gauche */
+  }
+  
+  /* Définir une largeur égale pour chaque colonne */
+  th, td {
+    width: 25%; /* Pour quatre colonnes égales */
+    font-family: "Arial", sans-serif; /* Police */
+  font-size: 20px; /* Taille de la police */
+   
+  }
+  
+
+  .menu {
+    &-images {
+      flex: 1;
+    }
+
+    div:last-child {
+      flex: 1;
+    }
+  }
+
+  footer .restaurant-info {
+    padding: 20px 80px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  footer .restaurant-info .locations,
+  footer .restaurant-info .hours {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  footer .restaurant-info h4 {
+    flex: 1 0 100%;
+  }
+
+  footer .restaurant-info .copyright {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* ANIMATIONS */
+#asterisk {
+  opacity: 0;
+  transform-origin: 50% 4%;
+  animation: spin 0.5s forwards;
+  animation-delay: 0.3s;
+}
+
+#asterisk::before,
+#asterisk::after {
+  transform-origin: center center;
+  animation: grow 0.5s forwards;
+  animation-delay: 0.8s;
+}
+
+.center p {
+  transform: translateY(-40px);
+  opacity: 0;
+  animation: fadeDown 0.9s forwards;
+  animation-delay: 1.3s;
+}
+
+.center h2 {
+  transform: scale(2);
+  opacity: 0;
+  animation: fade 0.5s forwards;
+}
+
+.center h1 {
+  transform: translateY(40px);
+  opacity: 0;
+  animation: fadeUp 0.5s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    width: 40%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}

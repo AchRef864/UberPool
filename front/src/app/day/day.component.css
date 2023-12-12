@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Overpass+Mono:600,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+
+/*
+  GLOBAL
+*/
+h2 {
+  margin-top: 0;
+}
+
+button {
+  border: 0;
+  background: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+/*
+  NAV
+*/
+
+nav {
+  padding: 15px 35px;
+  display: flex;
+  position: fixed;
+}
+
+nav h2 {
+  margin-bottom: 0;
+  flex: 1;
+  letter-spacing: 3px;
+  font-family: 'Overpass Mono', monospace !important;
+}
+
+nav #logo {
+  color: rgba(0,0,0,.6);
+  text-transform: uppercase;
+  border-bottom: solid 2px rgba(0,0,0,.6);
+}
+
+nav .nav-button {
+  color: #c0c0c0;
+  font-size: 23px;
+}
+
+nav div {
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  text-align: center;
+  transform: scale(0);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+nav div ul {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav div .exit-menu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: rgba(0,0,0,.6);
+  font-size: 20px;
+  padding: 10px;
+}
+
+nav div ul li {
+  font-family: 'PT Sans', sans-serif !important;
+  text-transform: uppercase;
+}
+
+nav div ul li a {
+  display: block;
+  color: rgba(0,0,0,.6);
+  padding: 15px 5px;
+  transition: all 0.4s;
+}
+
+nav div ul li a:hover,
+nav div ul li .active:hover {
+  color: #94143a;
+  border-bottom-color: #94143a;
+}
+@media screen and (max-width: 425px) {
+    header,
+    .bread-background,
+    .cake-background {
+      background-attachment: scroll;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    footer .restaurant-info {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    nav {
+      position: initial !important;
+      align-items: baseline;
+      padding: 20px 70px !important;
+    }
+  
+    nav .nav-button {
+      display: none;
+    }
+  
+    nav div {
+      position: initial !important;
+      background: none !important;
+      opacity: initial !important;
+      transform: initial !important;
+    }
+  
+    nav div ul {
+      position: initial !important;
+      flex-direction: row !important;
+    }
+  
+    nav div ul .exit-menu {
+      display: none;
+    }
+  
+    nav div ul li a {
+      font-size: 12.8px;
+      margin: 0 10px;
+      letter-spacing: 1px;
+      padding: 5px 0 !important;
+    }
+  
+    nav div ul li .active {
+      border-bottom: solid 1px lightgray;
+    }
+  
+    .add-padding {
+      padding: 50px 0;
+    }
+  
+    .add-flex {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .add-flex div:first-child {
+      flex: 1;
+      padding: 0 50px;
+    }
+  
+    .add-flex div:last-child {
+      min-width: 400px;
+      margin: 50px;
+    }
+    
+    
+    th, td {
+      border: 1px solid #ddd; /* Ajoute une bordure aux cellules */
+      padding: 8px; /* Ajoute de l'espace à l'intérieur des cellules */
+      text-align: left; /* Alignement du texte à gauche */
+    }
+    
+    /* Définir une largeur égale pour chaque colonne */
+    th, td {
+      width: 25%; /* Pour quatre colonnes égales */
+      font-family: "Arial", sans-serif; /* Police */
+    font-size: 20px; /* Taille de la police */
+     
+    }
+    
+  
+    .menu {
+      &-images {
+        flex: 1;
+      }
+  
+      div:last-child {
+        flex: 1;
+      }
+    }
+  
+    footer .restaurant-info {
+      padding: 20px 80px;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    footer .restaurant-info .locations,
+    footer .restaurant-info .hours {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  
+    footer .restaurant-info h4 {
+      flex: 1 0 100%;
+    }
+  
+    footer .restaurant-info .copyright {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  
+  /* ANIMATIONS */
+  #asterisk {
+    opacity: 0;
+    transform-origin: 50% 4%;
+    animation: spin 0.5s forwards;
+    animation-delay: 0.3s;
+  }
+  
+  #asterisk::before,
+  #asterisk::after {
+    transform-origin: center center;
+    animation: grow 0.5s forwards;
+    animation-delay: 0.8s;
+  }
+  
+  .center p {
+    transform: translateY(-40px);
+    opacity: 0;
+    animation: fadeDown 0.9s forwards;
+    animation-delay: 1.3s;
+  }
+  
+  .center h2 {
+    transform: scale(2);
+    opacity: 0;
+    animation: fade 0.5s forwards;
+  }
+  
+  .center h1 {
+    transform: translateY(40px);
+    opacity: 0;
+    animation: fadeUp 0.5s forwards;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade {
+    0% {
+      transform: scale(2);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes grow {
+    0% {
+      opacity: 0;
+      width: 0%;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      width: 40%;
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+  }
+  
+
+  /*******************SEARCH*******************/
+  
+  html {
+    height: 100%;
+  }
+  body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+  }
+  
+  .login-box {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 10px;
+    padding: 30px;
+    background: rgba(125, 63, 63, 0.5);
+   
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    text-align: justify; /* Center the content */
+}
+
+ h1 {
+  position: absolute;
+    top: 20%;
+    left: 40%;
+  margin: 0 0 30px;
+  padding: 0;
+  color: #94143a;
+  text-align: center;
+  
+  
+}
+
+  
+  /*************************grid**************/
+  .user-box {
+    position: relative;
+    color: #242323;
+  }
+  
+  .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #94143a;
+    margin-bottom: 30px;
+    border: none;
+   
+    outline: none;
+    background: transparent;
+  }
+  .user-box label {
+    width: 90%;
+    position: absolute;
+    top:1;
+    left: 0;
+    padding: left center;
+    font-size: 16px;
+    color: #242323;
+    pointer-events: none;
+    transition: .5s;
+  }
+  .user-box mat-icon {
+    margin-left: 5px; /* Add margin to separate the icon from the text */
+}
+
+  .user-box input:focus ~ label,
+  .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #94143a;
+    font-size: 12px;
+  }
+  button {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 10px 30px;
+    color: #100f10;
+    font-size: 16px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 20px;
+    letter-spacing: 4px;
+    background: #94143a;
+   
+    border-radius: 25px;
+  }
+  
+ button:hover {
+    background: #550713;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #661515,
+                0 0 25px #661515,
+                0 0 50px #661515,
+                0 0 100px #661515;
+  }
+  
