@@ -1,15 +1,27 @@
 const mongoose = require('mongoose');
 const supertest = require('supertest');
-const app = require('../index'); // Import your Express app
+const { app, server } = require('../index'); // Import your Express app and server
 
 const User = require('../models/user'); // Adjust the path accordingly
 
 beforeAll(async () => {
-  await mongoose.connect('mongodb+srv://UberPool:GAbtDNQTKgzUx3xZ@cluster0.vmptjhl.mongodb.net/UberPool', { useNewUrlParser: true, useUnifiedTopology: true });
+  await mongoose.connect('mongodb+srv://UberPool:GAbtDNQTKgzUx3xZ@cluster0.vmptjhl.mongodb.net/UberPool', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 });
 
 afterAll(async () => {
   await mongoose.connection.close();
+  await server.close();
+  // Return a resolved promise
+  return Promise.resolve();
+});
+
+
+beforeEach(async () => {
+  // Clear the Users collection before each test
+  await User.deleteMany({});
 });
 
 describe('User Model Validation', () => {
