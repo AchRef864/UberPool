@@ -1,4 +1,4 @@
-<p>search works!</p>
+
 <header>
     <nav>
       <h2><a routerLink="/homePassenger" id="logo">Carpool</a></h2>
@@ -16,31 +16,31 @@
   
     <h1>Where do you want to go?</h1>
     <div class="login-box">
-      <form>
+      <form #searchForm>
                       
         
                             <div class="user-box">
                               <mat-icon> place</mat-icon>
-                              <input type="text" name="" required="">
+                              <input type="text" name="departure" #departureInput required>
                               <label>Leaving from</label>
                             </div>
                           
                             <div class="user-box">
                               <mat-icon> my_location</mat-icon>
-                              <input type="text" name="" required="">
+                              <input type="text" name="destination" #destinationInput required>
                               <label>Going to</label>
                           </div>
                          
                             <div class="user-box">
                               <mat-icon>calendar_today</mat-icon>
-                              <input type="text" name="" required="">
+                              <input type="text" name="day" #dayInput required>
                               <label>Day</label>
                             </div>
                           
                           
                             <div class="user-box">
                               <mat-icon> person_pin</mat-icon>
-                              <input type="number" name="" required="" min="1" max="4">
+                              <input type="number" name="passengers" #passengersInput required min="1" max="4">
                               <label>Passengers</label>
                             </div>
                             
@@ -48,7 +48,7 @@
       </form>
       
     </div>
-    <button>
+    <button routerLink="/results">
       <span></span>
       <span></span>
       <span></span>

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ArchiveBookingComponent } from './archive-booking/archive-booking.component';
@@ -10,18 +9,19 @@ import { DayComponent } from './day/day.component';
 import { HeadingComponent } from './heading/heading.component';
 import { HomeDComponent } from './home-d/home-d.component';
 import { HomePComponent } from './home-p/home-p.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { PassengersComponent } from './passengers/passengers.component';
 import { PublishComponent } from './publish/publish.component';
 import { PublishedComponent } from './published/published.component';
 import { SearchComponent } from './search/search.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
 import { TimeComponent } from './time/time.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './api.service';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
@@ -33,23 +33,25 @@ import { MatIconModule } from '@angular/material/icon';
     HeadingComponent,
     HomeDComponent,
     HomePComponent,
-    LandingPageComponent,
-    LoginComponent,
     LogoutComponent,
     PassengersComponent,
     PublishComponent,
     PublishedComponent,
     SearchComponent,
-    SignUpComponent,
-    TimeComponent
+    TimeComponent,
+    ResultsComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

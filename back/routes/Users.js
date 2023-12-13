@@ -2,20 +2,43 @@ const User = require("../models/user");
 const express = require('express');
 const router = express.Router();
 const { createItem, readAll, readItem, updateItem, deleteItem } = require("../tools/ShortCut");
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+
 
 //Create
 router.post('/', async (req, res) => {
-    const user = new User({
-        email: req.body.email,
-        password: req.body.password,
-        phone_number: req.body.phone_number,
-        name: req.body.name,
-        profile_picture: req.body.profile_picture,
-        verification_status: req.body.verification_status,
-        user_type: req.body.user_type
-    })
-    await createItem(req, res, user)
-})
+    try {
+        // Validate the incoming data
+        const { email, password, phoneNumber, username,  userType } = req.body;
+
+        if (!email || !password || !phoneNumber  || !userType ||!username) {
+            console.log(req.body);
+            return res.status(400).json({ error: 'Missing required fields' });
+        }
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        // Additional validation logic if needed
+        console.log(userType);
+        const user = new User({
+            email,
+            name : username,
+            password : hashedPassword,
+            phone_number : phoneNumber,
+            user_type:userType
+        });
+        await user.save();
+
+
+        // Validate and save to the database
+
+        res.status(201).json({ message: 'User registered successfully' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
 
 //Read all
 router.get('/', async (req, res) => {
@@ -96,6 +119,34 @@ async function getUser(req, res, next) {
     res.user = user
     next()
 }
+router.post('/login', async (req, res) => {
+    
+    const { email, password } = req.body;
+
+    try {
+        // Validate user type
+        
+
+        const user = await User.findOne({ email });
+
+        if (!user) {
+            return res.status(401).json({ message: `Invalid  credentials` });
+        }
+
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+
+        if (!isPasswordValid) {
+            return res.status(401).json({ message: `psw invalide` });
+        }
+
+        // Generate JWT token
+        const token = jwt.sign({ userId: user._id }, 'your-secret-key', { expiresIn: '1h' });
+
+        res.json({ token , type:user.user_type});
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
 
 
 

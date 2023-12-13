@@ -1,44 +1,39 @@
 <div class="login-box">
     <h1>Create an account</h1>
-    <form>
+    <form #signupForm>
       <div class="user-box">
-        <input type="text" name="" required="">
+        <input type="text" name="username" #usernameInput required>
         <label>Username</label>
       </div>
       <div class="user-box">
-        <input type="text" name="" required="">
+        <input type="text" name="email" #emailInput required>
         <label>Email</label>
       </div>
       <div class="user-box">
-        <input type="text" name="" required="">
+        <input type="text" name="phoneNumber" #phoneNumberInput required>
         <label>Phone number</label>
       </div>
       <div class="user-box">
-        <select>
-          <option value=" ">User Type</option>
-          <option value="option1">Driver</option>
-          <option value="option1">Passenger</option>
+        <select name="userType" #userTypeInput required>
+          <option value="" disabled>User Type</option>
+          <option value="driver">Driver</option>
+          <option value="passenger">Passenger</option>
         </select>
         <label></label>
       </div>
       <div class="user-box">
-        <input type="password" name="" required="">
+        <input type="password" name="password" #passwordInput required>
         <label>Password</label>
       </div>
-      <a href="#">
+      <a (click)="createAccount(usernameInput.value, emailInput.value, phoneNumberInput.value, userTypeInput.value, passwordInput.value)" >
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         Create
       </a>
-      <p class="message">Already registered? <a routerLink="/login" class="second-a">Sign in</a></p>
+    
+      <p class="message">Already registered?  <a routerLink="/login" class="second-a">Sign in</a></p>
     </form>
   </div>
-  
-  
-  
-  
-  
-  
   

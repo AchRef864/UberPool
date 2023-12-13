@@ -1,5 +1,6 @@
 const express = require('express');
 const connectToMongoDB = require('./tools/connection');
+const cors = require('cors');
 
 // Connect to MongoDB
 connectToMongoDB.connectToMongoDB();
@@ -7,6 +8,8 @@ connectToMongoDB.connectToMongoDB();
 const app = express();
 const PORT = process.env.PORT || 3030;
 
+// Use CORS middleware after initializing app
+app.use(cors());
 app.use(express.json());
 
 // Define your routes here

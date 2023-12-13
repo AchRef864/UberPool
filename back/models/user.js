@@ -10,19 +10,13 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        validate: {
-            validator: (password) => /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(password),
-            message: 'Password must contain symbols, numbers, and a mix of upper and lower cases with no spaces, minimum of 6 characters.',
-        },
+
     },
     phone_number: {
         type: String,
         unique: true,
         required: true,
-        validate: {
-            validator: (phone_number) => /^[529][1-9]{7}$/.test(phone_number),
-            message: 'Phone number must be 8 characters and start with 5, 9, or 2.',
-        },
+        
     },
     name: {
         type: String,
