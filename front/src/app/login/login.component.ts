@@ -21,9 +21,9 @@ export class LoginComponent implements OnInit {
       email: email,
       password: password
     };
-    alert(formData.email)
+   
     // Access form data directly
-    
+     
     
     this.apiService.login(formData).subscribe(
       (response) => {

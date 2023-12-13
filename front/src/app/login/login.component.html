@@ -2,11 +2,11 @@
     <h1>Login</h1>
     <form #loginForm>
       <div class="user-box">
-        <input type="text" name="" #email required="">
+        <input type="text" name="" #email required>
         <label>Email</label>
       </div>
       <div class="user-box">
-        <input type="password" #psw name="" required="">
+        <input type="password" #psw name="" required>
         <label>Password</label>
       </div>
       <a (click)="login(email.value, psw.value)">
@@ -16,7 +16,7 @@
         <span></span>
         LOg In
       </a>
-      <p class="message">Not registered? <a routerLink="/signUp" class="second-a">Sign Up</a></p>
+      <p class="message">Not registered? <a routerLink="" class="second-a">Sign Up</a></p>
     </form>
   </div>
   

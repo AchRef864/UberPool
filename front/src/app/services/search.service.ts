@@ -10,8 +10,8 @@ export class SearchService {
   
   constructor(private _http: HttpClient) { }
 
-  search(ride: any): Observable<any> {
-    const url = `${this._baseUrl}/Users/search/`;
-    return this._http.post(url, ride);
+  search(rides: any): Observable<any> {
+    const url = `${this._baseUrl}/Reservations/`;
+    return this._http.post(url, rides);
   }
 }

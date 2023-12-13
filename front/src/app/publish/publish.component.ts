@@ -5,11 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './publish.component.html',
   styleUrls: ['./publish.component.css']
 })
-export class PublishComponent implements OnInit {
+export class PublishComponent  {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  
 
 }

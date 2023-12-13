@@ -9,10 +9,10 @@ import { SearchService } from '../services/search.service';
 })
 export class SearchComponent  {
 
-  constructor(private router: Router , private apiService: SearchService) {}
+  constructor(private router: Router, private apiService: SearchService) {}
   @ViewChild('searchForm') searchForm: ElementRef;
   
-  createAccount(departure: string, destination: string, day: Date, passengers: number) {
+  searchRide(departure: string, destination: string, day: Date, passengers: number) {
     const formData = {
       departure: departure,
       destination: destination,
@@ -26,13 +26,13 @@ export class SearchComponent  {
         // Handle successful user creation
         console.log('Search found', response);
 
-        
+        this.router.navigate(['/results']);
       },
       (error) => {
         // Handle error during user creation
         console.error('Error in search:', error);
         // You can add error handling logic here
-      }
+      } 
     );
   
 
