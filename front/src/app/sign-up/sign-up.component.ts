@@ -7,11 +7,11 @@ import { AuthService } from '../services/auth.service'; // Update the path
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignUpComponent {  
-  constructor(private router: Router , private apiService: AuthService) {}
+export class SignUpComponent {
+  constructor(private router: Router, private apiService: AuthService) { }
 
   @ViewChild('signupForm') signupForm: ElementRef;
-  
+
   createAccount(username: string, email: string, phoneNumber: string, userType: string, password: string) {
     const formData = {
       username: username,
@@ -41,14 +41,17 @@ export class SignUpComponent {
         // You can add error handling logic here
       }
     );
-    if(formData.userType=="passenger"){
+    if (formData.userType == "passenger") {
       this.router.navigate(['/homePassenger']);
 
-    }else{
+    } else {
       this.router.navigate(['/homeDriver']);
 
     }
 
     // Your form submission logic goes here
+  }
+  navigateToLogin() {
+    this.router.navigate(['/login']);
   }
 }

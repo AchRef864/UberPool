@@ -1,39 +1,40 @@
 <div class="login-box">
-    <h1>Create an account</h1>
-    <form #signupForm>
-      <div class="user-box">
-        <input type="text" name="username" #usernameInput required>
-        <label>Username</label>
-      </div>
-      <div class="user-box">
-        <input type="text" name="email" #emailInput required>
-        <label>Email</label>
-      </div>
-      <div class="user-box">
-        <input type="text" name="phoneNumber" #phoneNumberInput required>
-        <label>Phone number</label>
-      </div>
-      <div class="user-box">
-        <select name="userType" #userTypeInput required>
-          <option value="" disabled>User Type</option>
-          <option value="driver">Driver</option>
-          <option value="passenger">Passenger</option>
-        </select>
-        <label></label>
-      </div>
-      <div class="user-box">
-        <input type="password" name="password" #passwordInput required>
-        <label>Password</label>
-      </div>
-      <a (click)="createAccount(usernameInput.value, emailInput.value, phoneNumberInput.value, userTypeInput.value, passwordInput.value)" >
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Create
-      </a>
-    
-      <p class="message">Already registered?  <a routerLink="/login" class="second-a">Sign in</a></p>
-    </form>
-  </div>
-  
+  <h1>Create an account</h1>
+  <form #signupForm>
+    <div class="user-box">
+      <input type="text" name="username" #usernameInput required>
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="email" #emailInput required>
+      <label>Email</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="phoneNumber" #phoneNumberInput required>
+      <label>Phone number</label>
+    </div>
+    <div class="user-box">
+      <select name="userType" #userTypeInput required>
+        <option value="" disabled>User Type</option>
+        <option value="driver">Driver</option>
+        <option value="passenger">Passenger</option>
+      </select>
+      <label></label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="password" #passwordInput required>
+      <label>Password</label>
+    </div>
+    <a
+      (click)="createAccount(usernameInput.value, emailInput.value, phoneNumberInput.value, userTypeInput.value, passwordInput.value)">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Create
+    </a>
+
+    <p class="message">Already registered? <button type="button" (click)="navigateToLogin()"
+        class="second-a">Sign in</button></p>
+  </form>
+</div>
