@@ -13,5 +13,6 @@ export class SearchService {
   search(rides: any): Observable<any> {
     const url = `${this._baseUrl}/Rides/location`;
     return this._http.post(url, rides);
+
   }
 }

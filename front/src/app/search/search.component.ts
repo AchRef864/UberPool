@@ -43,7 +43,7 @@ export class SearchComponent {
         // Handle error during user creation
         console.error('Error in search:', error);
         alert("No rides are matching your criteria.");
-        // You can add error handling logic here
+        // You can add error handling logic heres
       }
     );
   }

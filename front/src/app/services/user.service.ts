@@ -14,5 +14,6 @@ export class UserService {
     getUserById(userId: string): Observable<any> {
         const url = `${this.baseUrl}/Users/${userId}`;
         return this.http.get(url);
+
     }
 }
