@@ -59,8 +59,8 @@ export class PublishFComponent {
       this.publishService.publish(this.publishForm.value).subscribe(
         (response) => {
           console.log('Ride published successfully:', response);
-          console.log('Navigating to resultPublish...');
-          this.router.navigate(['/resultPublish']);
+          
+          
         },
         (error) => {
           console.error('Error publishing ride:', error);

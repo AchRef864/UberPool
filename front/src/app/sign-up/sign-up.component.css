@@ -199,6 +199,7 @@
     transition: none;
     margin-top: 0;
     letter-spacing: normal;
+    pointer-events: none;
   }
   
   .login-box a.second-a:hover {
