@@ -19,6 +19,8 @@ import { ArchiveRidesComponent } from './archive-rides/archive-rides.component';
 import { LogoutComponent } from './logout/logout.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ResultsComponent } from './results/results.component';
+import { PublishFComponent } from './publish-f/publish-f.component';
+import { ResultPublishComponent } from './result-publish/result-publish.component';
 
 
 const routes: Routes = [
@@ -38,7 +40,9 @@ const routes: Routes = [
   {path: 'archiveRides', component: ArchiveRidesComponent},
   {path: 'logout', component: LogoutComponent},
   {path: '', component: SignUpComponent},
-  {path: 'results', component: ResultsComponent}
+  {path: 'results', component: ResultsComponent},
+  {path: 'publishF', component:PublishFComponent},
+  {path: "resultPublish", component:ResultPublishComponent}
   
 ];
 

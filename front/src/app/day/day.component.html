@@ -17,11 +17,11 @@
   
     <h1>When are you going?</h1>
     <div class="login-box">
-      <form>
+      <form #dayForm (ngSubmit)="onSubmit()">
                       
         
                             <div class="user-box">
-                              <input type="date" name="" required="">
+                              <input type="date" name="" #dateInput required>
                               <label></label>
                             </div>
                           
@@ -29,7 +29,7 @@
       </form>
       
     </div>
-    <button routerLink="/time">
+    <button routerLink="/comment">
       <span></span>
       <span></span>
       <span></span>

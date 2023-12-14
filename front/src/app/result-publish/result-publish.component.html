@@ -1,0 +1,29 @@
+<header>
+    <nav>
+      <h2><a routerLink="/homePassenger" id="logo">Carpool</a></h2>
+      <button class="nav-button fa fa-bars"></button>
+      <div>
+        <ul>
+          <button routerLink="/login" class="exit-menu fa fa-times"></button>
+          <li><a routerLink="/homeDriver"><mat-icon style="vertical-align: middle;">home</mat-icon>Home</a></li>
+         
+          <li><a routerLink="/logout"><mat-icon style="vertical-align: middle;">exit_to_app</mat-icon>Log Out</a></li>
+        </ul>
+      </div>
+    </nav>
+      
+    </header>
+<div>
+    <h2>Published Ride Details</h2>
+    <ul>
+      <li><strong>Start Location:</strong> {{ publishedData.start_location }}</li>
+      <li><strong>End Location:</strong> {{ publishedData.end_location }}</li>
+      <li><strong>Car Brand:</strong> {{ publishedData.car_brand }}</li>
+      <li><strong>Departure Time:</strong> {{ publishedData.departure_time }}</li>
+      <li><strong>Arrival Time:</strong> {{ publishedData.arrival_time }}</li>
+      <li><strong>Available Seats:</strong> {{ publishedData.available_seats }}</li>
+      <li><strong>Price per Seat:</strong> {{ publishedData.price_per_seat }}</li>
+      <li><strong>Ride Description:</strong> {{ publishedData.ride_description }}</li>
+    </ul>
+  </div>
+  

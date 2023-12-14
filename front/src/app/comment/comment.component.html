@@ -14,15 +14,14 @@
       
     </header>
   
-    <h1>Anything to add about your ride?</h1>
-    <textarea class="custom-textarea" placeholder="Enter your text here..."></textarea>
-    <button routerLink="/published">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      
-      Continue
-    </button>
-  
-  
+    <!-- comment.component.html -->
+<h1>Anything to add about your ride?</h1>
+<textarea class="custom-textarea" #commentTextarea placeholder="Enter your text here..."></textarea>
+
+<button (click)="publishRide()">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  Publish
+</button>

@@ -88,7 +88,7 @@ GET http://localhost:3000/Rides/filter/65638198fc8cbd7c791ed74d
 
 ###
 
-POST http://localhost:3000/Rides/
+POST http://localhost:3030/Rides/
 Content-Type: application/json
 
 {
@@ -124,3 +124,8 @@ Content-Type: application/json
   "reserved_seats": "5",
   "reservation_status": "confirmed"
 }
+
+###
+
+
+GET http://localhost:3000/Users/currentId

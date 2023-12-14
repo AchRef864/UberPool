@@ -1,0 +1,123 @@
+<header>
+    <nav>
+      <h2><a routerLink="/homePassenger" id="logo">Carpool</a></h2>
+      <button class="nav-button fa fa-bars"></button>
+      <div>
+        <ul>
+          <button routerLink="/login" class="exit-menu fa fa-times"></button>
+          <li><a routerLink="/homeDriver"><mat-icon style="vertical-align: middle;">home</mat-icon>Home</a></li>
+         
+          <li><a routerLink="/logout"><mat-icon style="vertical-align: middle;">exit_to_app</mat-icon>Log Out</a></li>
+        </ul>
+      </div>
+    </nav>
+      
+    </header>
+  
+    <div class="login-box">
+<mat-vertical-stepper >
+    <!-- Step 1: Place -->
+    <mat-step [stepControl]="publishForm">
+      <form [formGroup]="publishForm">
+        <ng-template matStepLabel>Start location</ng-template>
+        <div class="user-box">
+          <input type="text" formControlName="start_location" placeholder="Enter the full address" #startLocationInput required>
+        </div>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    
+    <!-- Step 2: Heading -->
+    <mat-step [stepControl]="publishForm">
+      <form [formGroup]="publishForm">
+        <ng-template matStepLabel>End location</ng-template>
+        <div class="user-box">
+          <input type="text" formControlName="end_location" placeholder="Enter heading" required>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="publishForm">
+      <form [formGroup]="publishForm">
+        <ng-template matStepLabel>Car brand</ng-template>
+        <div class="user-box">
+          <input type="text" formControlName="car_brand" placeholder="Enter your car brand" required>
+        </div>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <!-- Step 3: Day -->
+    <mat-step [stepControl]="publishForm">
+      <form [formGroup]="publishForm">
+        <ng-template matStepLabel>Departure time</ng-template>
+        <div class="user-box">
+          <input type="date" formControlName="departure_time" placeholder="Enter the day you will leave" required>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="publishForm">
+        <form [formGroup]="publishForm">
+          <ng-template matStepLabel>Arrival time</ng-template>
+          <div class="user-box">
+            <input type="date" formControlName="arrival_time" placeholder="Enter the day you will come back" required>
+          </div>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+   
+    <!-- Step 5: Passengers -->
+    <mat-step [stepControl]="publishForm">
+      <form [formGroup]="publishForm">
+        <ng-template matStepLabel>Passengers</ng-template>
+        <div class="user-box">
+          <input type="text" formControlName="available_seats" placeholder="Enter number of passengers you want take" required>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="publishForm">
+        <form [formGroup]="publishForm">
+          <ng-template matStepLabel>Price</ng-template>
+          <div class="user-box">
+            <input type="text" formControlName="price_per_seat" placeholder="Enter price" required>
+          </div>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+    <!-- Step 6: Comment -->
+    <mat-step [stepControl]="publishForm">
+      <form [formGroup]="publishForm">
+        <ng-template matStepLabel>Comment</ng-template>
+        <div class="user-box">
+          <textarea formControlName="ride_description" placeholder="Add comment"></textarea>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="onSubmit()">Publish</button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-vertical-stepper>
+  <div >

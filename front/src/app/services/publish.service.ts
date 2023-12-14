@@ -12,6 +12,10 @@ export class PublishService {
   constructor(private _http: HttpClient) { }
 
   publish(ride: any): Observable<any> {
+     ride.driver_id = localStorage.getItem("id"); 
+     console.log(ride);
+     
+
     const url = `${this._baseUrl}/Rides/`;
     return this._http.post(url, ride);
   }

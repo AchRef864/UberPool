@@ -22,6 +22,11 @@ import { ApiService } from './api.service';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ResultsComponent } from './results/results.component';
+import { PublishFComponent } from './publish-f/publish-f.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { ResultPublishComponent } from './result-publish/result-publish.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +45,8 @@ import { ResultsComponent } from './results/results.component';
     SearchComponent,
     TimeComponent,
     ResultsComponent,
+    PublishFComponent,
+    ResultPublishComponent,
     
   ],
   imports: [
@@ -49,7 +56,10 @@ import { ResultsComponent } from './results/results.component';
     MatIconModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatStepperModule,
+    MatInputModule,
+    MatButtonModule,
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

@@ -1,29 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+// passengers.component.ts
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { DataSharingService } from '../services/data-sharing.service';
 
 @Component({
   selector: 'app-passengers',
   templateUrl: './passengers.component.html',
   styleUrls: ['./passengers.component.css']
 })
-export class PassengersComponent implements OnInit {
-  numberOfPassengers: number = 1; // Initial value
-  minPassengers: number = 1;
-  maxPassengers: number = 4;
+export class PassengersComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  incrementPassengers() {
-    if (this.numberOfPassengers < this.maxPassengers) {
-      this.numberOfPassengers++;
-    }
-  }
-
-  decrementPassengers() {
-    if (this.numberOfPassengers > this.minPassengers) {
-      this.numberOfPassengers--;
-    }
-  }
 }

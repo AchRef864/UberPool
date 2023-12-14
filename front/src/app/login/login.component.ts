@@ -30,6 +30,9 @@ export class LoginComponent implements OnInit {
         // Handle successful user creation
         console.log('User logged in successfully:', response);
         localStorage.setItem('token', response.token);
+        console.log(response.id);
+        
+        localStorage.setItem('id', response.id);
         if(response.type=="passenger"){
           this.router.navigate(['/homePassenger']);
         }else{

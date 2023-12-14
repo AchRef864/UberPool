@@ -79,10 +79,7 @@ const rideSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    price_per_seat: {
-        type: Number,
-        required: true,
-    },
+   
     ride_description: String,
     creation_date: {
         type: Date,

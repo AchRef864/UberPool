@@ -16,12 +16,12 @@
     </header>
   
     <h1>Where are you heading?</h1>
-    <div class="login-box">
-      <form>
+    <div class="login-box" >
+      <form #headingForm (ngSubmit)="onSubmit()">
                       
         
                             <div class="user-box">
-                              <input type="text" name="" required="">
+                              <input type="text" name="" #endInput required>
                               <label><mat-icon style="vertical-align: middle;">place</mat-icon>Enter the full adress</label>
                             </div>
                           
@@ -29,7 +29,7 @@
       </form>
       
     </div>
-    <button routerLink="/day">
+    <button type="submit" routerLink="/day">
       <span></span>
       <span></span>
       <span></span>

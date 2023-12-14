@@ -19,4 +19,13 @@ export class AuthService {
     const loginUrl = `${this._baseUrl}/Users/login/`;
     return this._http.post(loginUrl, user);
   }
+ //hedhya kaada testaml fiha ??
+
+  getCurrentUser(): Observable<any> {
+    var id = 1 ;
+    // Assuming your server provides an endpoint to get the current user details
+    const currentUserUrl = `${this._baseUrl}/Users/${id}`;  // Replace with your actual endpoint
+    return this._http.get(currentUserUrl);
+  }
 }
+// ok i

@@ -5,19 +5,28 @@ const { createItem, readAll, readItem, updateItem, deleteItem } = require("../to
 
 //Create
 router.post('/', async (req, res) => {
+  try {
     const ride = new Ride({
-        driver_id: req.body.driver_id,
-        car_brand: req.body.car_brand,
-        start_location: req.body.start_location,
-        end_location: req.body.end_location,
-        departure_time: req.body.departure_time,
-        arrival_time: req.body.arrival_time,
-        available_seats: req.body.available_seats,
-        price_per_seat: req.body.price_per_seat,
-        ride_description: req.body.ride_description
-    })
-    await createItem(req, res, ride)
-})
+      driver_id: req.body.driver_id,
+      car_brand: req.body.car_brand,
+      start_location: req.body.start_location,
+      end_location: req.body.end_location,
+      departure_time: req.body.departure_time,
+      arrival_time: req.body.arrival_time,
+      available_seats: req.body.available_seats,
+      price_per_seat: req.body.price_per_seat,
+      ride_description: req.body.ride_description
+    });
+    console.log(ride);
+    // Assuming createItem is a function that saves the ride to the database
+    await ride.save();
+
+    res.status(201).json({ message: 'Ride created successfully' });
+  } catch (error) {
+    console.error('Error creating ride:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
 
 //Read all
 router.get('/', async (req, res) => {

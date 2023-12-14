@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { DataSharingService } from '../services/data-sharing.service';
 @Component({
   selector: 'app-heading',
   templateUrl: './heading.component.html',
   styleUrls: ['./heading.component.css']
 })
-export class HeadingComponent implements OnInit {
+export class HeadingComponent  {
 
-  constructor() { }
+  @ViewChild('endInput', { static: true }) endInput: ElementRef;
 
-  ngOnInit(): void {
+  constructor(private dataSharingService: DataSharingService) {}
+
+  onSubmit() {
+    const rideData = { end: this.endInput.nativeElement.value};
+    this.dataSharingService.updateFormData(rideData);
   }
-
 }

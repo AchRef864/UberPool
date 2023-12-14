@@ -104,6 +104,16 @@ router.post('/search', async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 });
+router.post('/currentId', async (req, res) => {
+    try {
+        const { searchTerm } = req.body;
+        const regex = new RegExp(searchTerm, 'i'); // Case-insensitive search
+        const users = await User.find({ email: { $regex: regex } });
+        res.json({ users });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
 
 async function getUser(req, res, next) {
     let user
@@ -119,6 +129,7 @@ async function getUser(req, res, next) {
     res.user = user
     next()
 }
+
 router.post('/login', async (req, res) => {
     
     const { email, password } = req.body;
@@ -141,8 +152,11 @@ router.post('/login', async (req, res) => {
 
         // Generate JWT token
         const token = jwt.sign({ userId: user._id }, 'your-secret-key', { expiresIn: '1h' });
+        
+        const id = user._id.toHexString();
+        console.log(id);
 
-        res.json({ token , type:user.user_type});
+        res.json({ token , type:user.user_type, id : id});
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
