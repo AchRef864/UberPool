@@ -50,9 +50,9 @@ nav h2 {
 }
 
 nav #logo {
-  color: rgba(0,0,0,.6);
+  color: rgba(0, 0, 0, .6);
   text-transform: uppercase;
-  border-bottom: solid 2px rgba(0,0,0,.6);
+  border-bottom: solid 2px rgba(0, 0, 0, .6);
 }
 
 nav .nav-button {
@@ -86,7 +86,7 @@ nav div .exit-menu {
   position: absolute;
   top: 15px;
   right: 15px;
-  color: rgba(0,0,0,.6);
+  color: rgba(0, 0, 0, .6);
   font-size: 20px;
   padding: 10px;
 }
@@ -98,7 +98,7 @@ nav div ul li {
 
 nav div ul li a {
   display: block;
-  color: rgba(0,0,0,.6);
+  color: rgba(0, 0, 0, .6);
   padding: 15px 5px;
   transition: all 0.4s;
 }
@@ -108,321 +108,385 @@ nav div ul li .active:hover {
   color: #94143a;
   border-bottom-color: #94143a;
 }
-@media screen and (max-width: 425px) {
-    header,
-    .bread-background,
-    .cake-background {
-      background-attachment: scroll;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    footer .restaurant-info {
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: flex-start;
-    }
-  }
-  
-  @media (min-width: 769px) {
-    nav {
-      position: initial !important;
-      align-items: baseline;
-      padding: 20px 70px !important;
-    }
-  
-    nav .nav-button {
-      display: none;
-    }
-  
-    nav div {
-      position: initial !important;
-      background: none !important;
-      opacity: initial !important;
-      transform: initial !important;
-    }
-  
-    nav div ul {
-      position: initial !important;
-      flex-direction: row !important;
-    }
-  
-    nav div ul .exit-menu {
-      display: none;
-    }
-  
-    nav div ul li a {
-      font-size: 12.8px;
-      margin: 0 10px;
-      letter-spacing: 1px;
-      padding: 5px 0 !important;
-    }
-  
-    nav div ul li .active {
-      border-bottom: solid 1px lightgray;
-    }
-  
-    .add-padding {
-      padding: 50px 0;
-    }
-  
-    .add-flex {
-      flex-direction: row;
-      align-items: center;
-    }
-  
-    .add-flex div:first-child {
-      flex: 1;
-      padding: 0 50px;
-    }
-  
-    .add-flex div:last-child {
-      min-width: 400px;
-      margin: 50px;
-    }
-    
-    
-    th, td {
-      border: 1px solid #ddd; /* Ajoute une bordure aux cellules */
-      padding: 8px; /* Ajoute de l'espace à l'intérieur des cellules */
-      text-align: left; /* Alignement du texte à gauche */
-    }
-    
-    /* Définir une largeur égale pour chaque colonne */
-    th, td {
-      width: 25%; /* Pour quatre colonnes égales */
-      font-family: "Arial", sans-serif; /* Police */
-    font-size: 20px; /* Taille de la police */
-     
-    }
-    
-  
-    .menu {
-      &-images {
-        flex: 1;
-      }
-  
-      div:last-child {
-        flex: 1;
-      }
-    }
-  
-    footer .restaurant-info {
-      padding: 20px 80px;
-      flex-direction: row;
-      justify-content: space-around;
-    }
-  
-    footer .restaurant-info .locations,
-    footer .restaurant-info .hours {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-  
-    footer .restaurant-info h4 {
-      flex: 1 0 100%;
-    }
-  
-    footer .restaurant-info .copyright {
-      flex-direction: row;
-      justify-content: space-around;
-    }
-  }
-  
-  /* ANIMATIONS */
-  #asterisk {
-    opacity: 0;
-    transform-origin: 50% 4%;
-    animation: spin 0.5s forwards;
-    animation-delay: 0.3s;
-  }
-  
-  #asterisk::before,
-  #asterisk::after {
-    transform-origin: center center;
-    animation: grow 0.5s forwards;
-    animation-delay: 0.8s;
-  }
-  
-  .center p {
-    transform: translateY(-40px);
-    opacity: 0;
-    animation: fadeDown 0.9s forwards;
-    animation-delay: 1.3s;
-  }
-  
-  .center h2 {
-    transform: scale(2);
-    opacity: 0;
-    animation: fade 0.5s forwards;
-  }
-  
-  .center h1 {
-    transform: translateY(40px);
-    opacity: 0;
-    animation: fadeUp 0.5s forwards;
-    animation-delay: 0.3s;
-  }
-  
-  @keyframes fadeUp {
-    0% {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes fade {
-    0% {
-      transform: scale(2);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fadeDown {
-    0% {
-      opacity: 0;
-      transform: translateY(-40px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes grow {
-    0% {
-      opacity: 0;
-      width: 0%;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-      width: 40%;
-    }
-  }
-  
-  @keyframes spin {
-    0% {
-      transform: rotate(0);
-      opacity: 0;
-    }
-    100% {
-      transform: rotate(360deg);
-      opacity: 1;
-    }
-  }
-  
 
-  /*******************SEARCH*******************/
-  
-  html {
-    height: 100%;
+@media screen and (max-width: 425px) {
+
+  header,
+  .bread-background,
+  .cake-background {
+    background-attachment: scroll;
   }
-  body {
-    margin:0;
-    padding:0;
-    font-family: sans-serif;
-    background: linear-gradient(#141e30, #243b55);
-  }
-  
-  .login-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-    padding: 30px;
-    background: rgba(125, 63, 63, 0.5);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    text-align: center; /* Center the content */
 }
 
- h1 {
+@media (min-width: 768px) {
+  footer .restaurant-info {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 769px) {
+  nav {
+    position: initial !important;
+    align-items: baseline;
+    padding: 20px 70px !important;
+  }
+
+  nav .nav-button {
+    display: none;
+  }
+
+  nav div {
+    position: initial !important;
+    background: none !important;
+    opacity: initial !important;
+    transform: initial !important;
+  }
+
+  nav div ul {
+    position: initial !important;
+    flex-direction: row !important;
+  }
+
+  nav div ul .exit-menu {
+    display: none;
+  }
+
+  nav div ul li a {
+    font-size: 12.8px;
+    margin: 0 10px;
+    letter-spacing: 1px;
+    padding: 5px 0 !important;
+  }
+
+  nav div ul li .active {
+    border-bottom: solid 1px lightgray;
+  }
+
+  .add-padding {
+    padding: 50px 0;
+  }
+
+  .add-flex {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .add-flex div:first-child {
+    flex: 1;
+    padding: 0 50px;
+  }
+
+  .add-flex div:last-child {
+    min-width: 400px;
+    margin: 50px;
+  }
+
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    /* Ajoute une bordure aux cellules */
+    padding: 8px;
+    /* Ajoute de l'espace à l'intérieur des cellules */
+    text-align: left;
+    /* Alignement du texte à gauche */
+  }
+
+  /* Définir une largeur égale pour chaque colonne */
+  th,
+  td {
+    width: 25%;
+    /* Pour quatre colonnes égales */
+    font-family: "Arial", sans-serif;
+    /* Police */
+    font-size: 20px;
+    /* Taille de la police */
+
+  }
+
+
+  .menu {
+    &-images {
+      flex: 1;
+    }
+
+    div:last-child {
+      flex: 1;
+    }
+  }
+
+  footer .restaurant-info {
+    padding: 20px 80px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  footer .restaurant-info .locations,
+  footer .restaurant-info .hours {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  footer .restaurant-info h4 {
+    flex: 1 0 100%;
+  }
+
+  footer .restaurant-info .copyright {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* ANIMATIONS */
+#asterisk {
+  opacity: 0;
+  transform-origin: 50% 4%;
+  animation: spin 0.5s forwards;
+  animation-delay: 0.3s;
+}
+
+#asterisk::before,
+#asterisk::after {
+  transform-origin: center center;
+  animation: grow 0.5s forwards;
+  animation-delay: 0.8s;
+}
+
+.center p {
+  transform: translateY(-40px);
+  opacity: 0;
+  animation: fadeDown 0.9s forwards;
+  animation-delay: 1.3s;
+}
+
+.center h2 {
+  transform: scale(2);
+  opacity: 0;
+  animation: fade 0.5s forwards;
+}
+
+.center h1 {
+  transform: translateY(40px);
+  opacity: 0;
+  animation: fadeUp 0.5s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    width: 40%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+
+/*******************SEARCH*******************/
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55);
+}
+
+.login-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  padding: 30px;
+  background: rgba(125, 63, 63, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  text-align: center;
+  /* Center the content */
+}
+
+h1 {
   margin: 0 0 30px;
   padding: 0;
   color: #94143a;
   text-align: center;
 }
 
-  
-  /*************************grid**************/
-  .user-box {
-    position: relative;
-    color: #242323;
-  }
-  
-  .user-box input {
-    width: 60%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #94143a;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #242323;
-    outline: none;
-    background: transparent;
-  }
-  .user-box label {
-    width: 90%;
-    position: absolute;
-    top:0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #242323;
-    pointer-events: none;
-    transition: .5s;
-  }
-  .user-box mat-icon {
-    margin-left: 5px; /* Add margin to separate the icon from the text */
+
+/*************************grid**************/
+.user-box {
+  position: relative;
+  color: #242323;
 }
 
-  .user-box input:focus ~ label,
-  .user-box input:valid ~ label {
-    top: -20px;
-    left: 0;
-    color: #94143a;
-    font-size: 12px;
-  }
-  button {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
-    padding: 10px 30px;
-    color: #100f10;
-    font-size: 16px;
-    text-decoration: none;
-    overflow: hidden;
-    transition: .5s;
-    margin-top: 20px;
-    letter-spacing: 4px;
-    background: #94143a;
-   
-    border-radius: 25px;
-  }
-  
- button:hover {
-    background: #550713;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #661515,
-                0 0 25px #661515,
-                0 0 50px #661515,
-                0 0 100px #661515;
-  }
-  
+.user-box input {
+  width: 60%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #94143a;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #242323;
+  outline: none;
+  background: transparent;
+}
+
+.user-box label {
+  width: 90%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #242323;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.user-box mat-icon {
+  margin-left: 5px;
+  /* Add margin to separate the icon from the text */
+}
+
+.user-box input:focus~label,
+.user-box input:valid~label {
+  top: -20px;
+  left: 0;
+  color: #94143a;
+  font-size: 12px;
+}
+
+button {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: 10px 30px;
+  color: #100f10;
+  font-size: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 20px;
+  letter-spacing: 4px;
+  background: #94143a;
+
+  border-radius: 25px;
+}
+
+button:hover {
+  background: #550713;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #661515,
+    0 0 25px #661515,
+    0 0 50px #661515,
+    0 0 100px #661515;
+}
+
+
+
+/* results.component.css */
+
+/* Add general styling for the results container */
+.results-container {
+  margin: 20px;
+  /* Add some margin around the results */
+}
+
+/* Style each result item */
+.result-item {
+  border: 1px solid #ccc;
+  /* Add a border around each result item */
+  padding: 10px;
+  /* Add padding to each result item */
+  margin-bottom: 10px;
+  /* Add some space between each result item */
+  display: flex;
+  /* Use flexbox for a horizontal layout */
+  flex-direction: column;
+  /* Arrange items vertically within each result item */
+}
+
+/* Style specific elements within each result item */
+.result-item p {
+  margin: 5px 0;
+  /* Add some margin to paragraphs within each result item */
+}
+
+.result-item p.driverName {
+  font-weight: bold;
+  /* Make the driver's name bold */
+}
+
+/* Style for creating a table-like structure */
+.result-item>p {
+  display: flex;
+  /* Use flexbox for a horizontal layout */
+  justify-content: space-between;
+  /* Spread elements evenly within each row */
+}

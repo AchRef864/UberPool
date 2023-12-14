@@ -1,60 +1,57 @@
-
 <header>
-    <nav>
-      <h2><a routerLink="/homePassenger" id="logo">Carpool</a></h2>
-      <button class="nav-button fa fa-bars"></button>
-      <div>
-        <ul>
-          <button routerLink="/login" class="exit-menu fa fa-times"></button>
-          <li><a routerLink="/homePassenger"><mat-icon style="vertical-align: middle;">home</mat-icon>Home</a></li>
-          <li><a routerLink=""><mat-icon style="vertical-align: middle;">exit_to_app</mat-icon>Log Out</a></li>
-        </ul>
-      </div>
-    </nav>
-      
-    </header>
-  
-    <h1>Where do you want to go?</h1>
-    <div class="login-box">
-      <form #searchForm>
-                      
-        
-                            <div class="user-box">
-                              <mat-icon> place</mat-icon>
-                              <input type="text" name="departure" #departureInput required>
-                              <label>Leaving from</label>
-                            </div>
-                          
-                            <div class="user-box">
-                              <mat-icon> my_location</mat-icon>
-                              <input type="text" name="destination" #destinationInput required>
-                              <label>Going to</label>
-                          </div>
-                         
-                            <div class="user-box">
-                              <mat-icon>calendar_today</mat-icon>
-                              <input type="text" name="day" #dayInput required>
-                              <label>Day</label>
-                            </div>
-                          
-                          
-                            <div class="user-box">
-                              <mat-icon> person_pin</mat-icon>
-                              <input type="number" name="passengers" #passengersInput required min="1" max="4">
-                              <label>Passengers</label>
-                            </div>
-                            
-                 
-      </form>
-      
+  <nav>
+    <h2><a routerLink="/homePassenger" id="logo">Carpool</a></h2>
+    <button class="nav-button fa fa-bars"></button>
+    <div>
+      <ul>
+        <button routerLink="/login" class="exit-menu fa fa-times"></button>
+        <li><a routerLink="/homePassenger"><mat-icon style="vertical-align: middle;">home</mat-icon>Home</a></li>
+        <li><a routerLink=""><mat-icon style="vertical-align: middle;">exit_to_app</mat-icon>Log Out</a></li>
+      </ul>
     </div>
-    <button (click)="searchRide(departureInput.value, destinationInput.value, dayInput.value, passengersInput.value)">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <mat-icon> person_pin_circle</mat-icon>
-      Search
-    </button>
-  
-  
+  </nav>
+
+</header>
+
+<h1>Where do you want to go?</h1>
+<div class="login-box">
+  <form #searchForm>
+
+
+    <div class="user-box">
+      <mat-icon> place</mat-icon>
+      <input type="text" name="departure" #departureInput required>
+      <label>Leaving from</label>
+    </div>
+
+    <div class="user-box">
+      <mat-icon> my_location</mat-icon>
+      <input type="text" name="destination" #destinationInput required>
+      <label>Going to</label>
+    </div>
+
+    <div class="user-box">
+      <mat-icon>calendar_today</mat-icon>
+      <input type="date" name="day" #dayInput required>
+    </div>
+
+
+
+    <div class="user-box">
+      <mat-icon> person_pin</mat-icon>
+      <input type="number" name="passengers" #passengersInput required min="1" max="4">
+      <label>Passengers</label>
+    </div>
+
+
+  </form>
+
+</div>
+<button (click)="searchRide(departureInput.value, destinationInput.value, dayInput.value, passengersInput.value)">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <mat-icon> person_pin_circle</mat-icon>
+  Search
+</button>

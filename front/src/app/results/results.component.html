@@ -1,16 +1,24 @@
-
 <header>
-    <nav>
-      <h2><a routerLink="/homePassenger" id="logo">Carpool</a></h2>
-      <button class="nav-button fa fa-bars"></button>
-      <div>
-        <ul>
-          <button routerLink="/login" class="exit-menu fa fa-times"></button>
-          <li><a routerLink="/homePassenger"><mat-icon style="vertical-align: middle;">home</mat-icon>Home</a></li>
-          <li><a routerLink=""><mat-icon style="vertical-align: middle;">exit_to_app</mat-icon>Log Out</a></li>
-        </ul>
-      </div>
-    </nav>
-      
-    </header>
-  
+  <nav>
+    <h2><a routerLink="/homePassenger" id="logo">Carpool</a></h2>
+    <button class="nav-button fa fa-bars"></button>
+    <div>
+      <ul>
+        <button routerLink="/login" class="exit-menu fa fa-times"></button>
+        <li><a routerLink="/homePassenger"><mat-icon style="vertical-align: middle;">home</mat-icon>Home</a></li>
+        <li><a routerLink=""><mat-icon style="vertical-align: middle;">exit_to_app</mat-icon>Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+</header>
+<div class="results-container">
+  <div *ngFor="let result of results" class="result-item">
+    <p class="driverName">Driver Name: {{ result.driverName }}</p>
+    <p>Departure Time: {{ result.departure_time | date:'medium' }}</p>
+    <p>Arrival Time: {{ result.arrival_time | date:'medium' }}</p>
+    <p>Available Seats: {{ result.available_seats }}</p>
+    <p class="price">Price Per Seat: {{ result.price_per_seat }} TND</p>
+    <p>Phone Number: {{ result.driverPhone }}</p>
+  </div>
+</div>
