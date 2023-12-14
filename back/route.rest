@@ -1,9 +1,9 @@
 #User
-GET http://localhost:3000/Users/
+GET http://localhost:3030/Users/
 
 ###
 
-GET http://localhost:3000/Users/65638198fc8cbd7c791ed74d
+GET http://localhost:3030/Users/65785a83c81422c5b875f416
 
 
 ###
@@ -105,12 +105,14 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/Rides/location
+POST http://localhost:3030/Rides/location
 Content-Type: application/json
 
 {
-  "start_location": "",
-  "end_location": "e"
+  "departure":"",
+  "destination":"",
+  "day":"",
+  "passengers":""
 }
 
 ###

@@ -1,0 +1,74 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\rahal\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@9.3.0
+2 info using node@v16.14.2
+3 timing npm:load:whichnode Completed in 2ms
+4 timing config:load:defaults Completed in 1ms
+5 timing config:load:file:C:\Users\rahal\AppData\Roaming\npm\node_modules\npm\npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 2ms
+7 timing config:load:cli Completed in 1ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:D:\GitHub\UberPool\.npmrc Completed in 1ms
+10 timing config:load:project Completed in 2ms
+11 timing config:load:file:C:\Users\rahal\.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:C:\Users\rahal\AppData\Roaming\npm\etc\npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:setEnvs Completed in 1ms
+16 timing config:load Completed in 7ms
+17 timing npm:load:configload Completed in 7ms
+18 timing npm:load:mkdirpcache Completed in 1ms
+19 timing npm:load:mkdirplogs Completed in 0ms
+20 verbose title npm cache clean
+21 verbose argv "cache" "clean" "--cache" "--force"
+22 timing npm:load:setTitle Completed in 1ms
+23 timing config:load:flatten Completed in 2ms
+24 timing npm:load:display Completed in 2ms
+25 verbose logfile logs-max:10 dir:D:\GitHub\UberPool\--force\_logs\2023-12-13T23_24_46_340Z-
+26 verbose logfile D:\GitHub\UberPool\--force\_logs\2023-12-13T23_24_46_340Z-debug-0.log
+27 timing npm:load:logFile Completed in 31ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 44ms
+31 timing command:cache Completed in 0ms
+32 verbose stack Error: As of npm@5, the npm cache self-heals from corruption issues
+32 verbose stack   by treating integrity mismatches as cache misses.  As a result,
+32 verbose stack   data extracted from the cache is guaranteed to be valid.  If you
+32 verbose stack   want to make sure everything is consistent, use `npm cache verify`
+32 verbose stack   instead.  Deleting the cache can only make npm go slower, and is
+32 verbose stack   not likely to correct any problems you may be encountering!
+32 verbose stack
+32 verbose stack   On the other hand, if you're debugging an issue with the installer,
+32 verbose stack   or race conditions that depend on the timing of writing to an empty
+32 verbose stack   cache, you can use `npm install --cache /tmp/empty-cache` to use a
+32 verbose stack   temporary cache instead of nuking the actual one.
+32 verbose stack
+32 verbose stack   If you're sure you want to delete the entire cache, rerun this command
+32 verbose stack   with --force.
+32 verbose stack     at Cache.clean (C:\Users\rahal\AppData\Roaming\npm\node_modules\npm\lib\commands\cache.js:115:15)
+32 verbose stack     at Cache.exec (C:\Users\rahal\AppData\Roaming\npm\node_modules\npm\lib\commands\cache.js:98:27)
+32 verbose stack     at Cache.cmdExec (C:\Users\rahal\AppData\Roaming\npm\node_modules\npm\lib\base-command.js:130:17)
+32 verbose stack     at Npm.exec (C:\Users\rahal\AppData\Roaming\npm\node_modules\npm\lib\npm.js:154:20)
+32 verbose stack     at async module.exports (C:\Users\rahal\AppData\Roaming\npm\node_modules\npm\lib\cli.js:134:5)
+33 verbose cwd D:\GitHub\UberPool
+34 verbose Windows_NT 10.0.22000
+35 verbose node v16.14.2
+36 verbose npm  v9.3.0
+37 error As of npm@5, the npm cache self-heals from corruption issues
+37 error   by treating integrity mismatches as cache misses.  As a result,
+37 error   data extracted from the cache is guaranteed to be valid.  If you
+37 error   want to make sure everything is consistent, use `npm cache verify`
+37 error   instead.  Deleting the cache can only make npm go slower, and is
+37 error   not likely to correct any problems you may be encountering!
+37 error
+37 error   On the other hand, if you're debugging an issue with the installer,
+37 error   or race conditions that depend on the timing of writing to an empty
+37 error   cache, you can use `npm install --cache /tmp/empty-cache` to use a
+37 error   temporary cache instead of nuking the actual one.
+37 error
+37 error   If you're sure you want to delete the entire cache, rerun this command
+37 error   with --force.
+38 verbose exit 1
+39 timing npm Completed in 75ms
+40 verbose code 1
+41 error A complete log of this run can be found in:
+41 error     D:\GitHub\UberPool\--force\_logs\2023-12-13T23_24_46_340Z-debug-0.log

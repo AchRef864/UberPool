@@ -155,16 +155,29 @@ router.get('/filter/:id', async (req, res) => {
 //Find by location
 router.post('/location', async (req, res) => {
     try {
-        const { start_location, end_location } = req.body;
+        const {
+            departure,
+            destination,
+            day,
+            passengers,
+        } = req.body;
 
         const query = {};
 
-        if (start_location) {
-            query.start_location = { $regex: new RegExp(start_location, 'i') }; // Case-insensitive search
+        if (departure) {
+            query.start_location = { $regex: new RegExp(departure, 'i') }; // Case-insensitive search
         }
 
-        if (end_location) {
-            query.end_location = { $regex: new RegExp(end_location, 'i') }; // Case-insensitive search
+        if (destination) {
+            query.end_location = { $regex: new RegExp(destination, 'i') }; // Case-insensitive search
+        }
+
+        if (day) {
+            query.departure_time = { $gt: new Date(day) }; // Filter rides with departure time after input_time
+        }
+
+        if (passengers) {
+            query.available_seats = { $gte: passengers }; // Filter rides with available seats greater than or equal to passenger_number
         }
 
         const rides = await Ride.find(query);
@@ -179,6 +192,7 @@ router.post('/location', async (req, res) => {
         return res.status(500).json({ message: error.message });
     }
 });
+
 
 //Price high to low
 router.get('/price/high-low', async (req, res) => {
